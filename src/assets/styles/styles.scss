@@ -1,0 +1,252 @@
+.desk__wrapper {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 50px 30px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: lighten($dark-color, 50%);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: $dark-shadow;
+    border-radius: 10px;
+    
+    &-thumb {
+      border-radius: 10px;
+      background-color: $white-transparent;
+    }
+    
+    &-track {
+      box-shadow: none;
+      border-radius: 10px;
+      background: none;
+    }
+  }
+  
+}
+
+.desk {
+  &__heading {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: $dark-color;
+  }
+}
+
+.drop-zone {
+    display: inline-block;
+    width: 300px;
+    min-height: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    vertical-align: top;
+  
+  &:not(:last-child) {
+    margin-right: 20px;
+  }  
+
+  &_lightgray {
+      background-color: $light-color;
+  }
+
+  &__element {
+    box-shadow: 0 1px 0 #091e4240;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    min-height: 30px;
+    font-weight: 500;
+  }
+
+  &__footer {
+    margin-top: 10px;
+  }
+
+}
+
+.button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &__svg_small {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+
+  &__svg_big {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+
+
+  }
+
+  &__svg_dark {
+    fill: $contrast-color;
+
+    &:hover {
+      background: lighten($contrast-color, 10%);
+      fill: $light-color;
+    }
+  }
+
+  &__svg_light {
+    fill: $light-color; 
+
+    &:hover {
+      background: lighten($contrast-color, 10%);
+    }
+  }
+
+}
+
+.task {
+  white-space: pre-wrap;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $contrast-color;
+
+    &_modal {
+      justify-content: flex-end;
+    }
+  }
+  
+
+  &__content {
+    padding: 10px;
+    background: white;
+    color: $dark-color;
+  }
+
+  &__title {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &_modal {
+      cursor: default;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+  margin-bottom: 10px;
+  } 
+
+}
+
+.todo {
+  border-top: 2px dashed $contrast-color;
+  padding-top: 10px;
+  margin-top: 10px;
+
+  &__item {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  &__item_completed {
+    text-decoration: line-through;
+  }
+}
+
+.form-wrapper__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  &__input {
+    width: 85%;
+    min-height: 25px;
+    resize: none;
+    border-radius: 5px;
+    vertical-align: middle;
+    box-sizing: border-box;
+  }
+}
+
+.open-form-switch {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  line-height: 30px;
+  background: lighten($contrast-color, 10%);
+  color: $light-color;
+
+  &:hover {
+    background: $contrast-color;
+  }
+}
+
+.close-form-switch {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-decoration: none;
+
+}
+
+.form-switch_purple {
+  background: lighten($contrast-color, 25%);
+  color: $light-color; 
+
+  &:hover {
+    background: $contrast-color;
+  }
+}
+
+.modal {
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $light-shadow;
+    z-index: 999;
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    background: red;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    min-width: 400px;
+    z-index: 1000;
+  }
+}
+
+
+
