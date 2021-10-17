@@ -40,6 +40,7 @@ export default {
 				emit('createitem', props.array, title.value)
 			
 			title.value = ''
+			toggleForm()
 		}
    
 	 return {
