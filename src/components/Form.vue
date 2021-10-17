@@ -27,7 +27,6 @@ import { ref } from 'vue'
 export default {
 	props: {
 		array: Array,
-		listName: String,
 		msg: String
 	},
 	setup(props , { emit }) {
@@ -38,11 +37,7 @@ export default {
 		const toggleForm = () => formOn.value = !formOn.value
 
 		const newElem = () => {
-			if (props.listName) {
-				emit('createtask', props.array, title.value, props.listName)	
-			} else {
 				emit('createitem', props.array, title.value)
-			}
 			
 			title.value = ''
 		}
